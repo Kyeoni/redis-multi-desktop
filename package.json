@@ -1,5 +1,5 @@
 {
-  "name": "redis-multi-deskop",
+  "name": "redis-multi-desktop",
   "version": "1.0.0",
   "description": "",
   "main": "app/main/index.js",
