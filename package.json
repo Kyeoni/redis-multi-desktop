@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start:main": "electron .",
+    "start:renderer": "cd ./app/renderer/redis-multi-desktop && npm run dev"
   },
   "keywords": [],
   "author": "",
