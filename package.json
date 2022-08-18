@@ -6,10 +6,13 @@
   "dependencies": {
     "electron": "^20.0.2"
   },
+  "config": {
+    "renderdir": "app/renderer/redis-multi-desktop"
+  },
   "scripts": {
+    "prestart": "cd $npm_package_config_renderdir && npm run dev &",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:main": "electron .",
-    "start:renderer": "cd ./app/renderer/redis-multi-desktop && npm run dev"
+    "start": " sleep 3 && electron ."
   },
   "keywords": [],
   "author": "",
