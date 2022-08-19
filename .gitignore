@@ -26,3 +26,4 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+/app/renderer/redis-multi-desktop/.vscode/
