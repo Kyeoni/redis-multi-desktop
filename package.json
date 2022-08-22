@@ -10,11 +10,19 @@
     "renderdir": "app/renderer/redis-multi-desktop"
   },
   "scripts": {
-    "prestart": "cd $npm_package_config_renderdir && npm run dev &",
+    "start:renderer": "cd $npm_package_config_renderdir && npm run dev",
+    "start:electron": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": " sleep 3 && electron ."
+    "start": "concurrently \"wait-on tcp:5173 && npm run start:electron\" \"npm run start:renderer\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "wait-on": "^6.0.1"
+  }
 }
